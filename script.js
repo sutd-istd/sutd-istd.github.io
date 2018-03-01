@@ -64,24 +64,25 @@ function getDesc(id) {
   }
 }
 
-function detectmob() { 
- if( navigator.userAgent.match(/Android/i)
- || navigator.userAgent.match(/webOS/i)
- || navigator.userAgent.match(/iPhone/i)
- || navigator.userAgent.match(/iPad/i)
- || navigator.userAgent.match(/iPod/i)
- || navigator.userAgent.match(/BlackBerry/i)
- || navigator.userAgent.match(/Windows Phone/i)
- ){
+function isMobile() { 
+  if ((typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1)) {
     return true;
   }
- else {
+
+  else if( navigator.userAgent.match(/Android/i)
+    || navigator.userAgent.match(/webOS/i)
+    || navigator.userAgent.match(/iPhone/i)
+    || navigator.userAgent.match(/iPad/i)
+    || navigator.userAgent.match(/iPod/i)
+    || navigator.userAgent.match(/BlackBerry/i)
+    || navigator.userAgent.match(/Windows Phone/i)) {
+    return true;
+  } else {
     return false;
   }
 }
 
-if(detectmob()) {
-  var bodyHTML = document.body.innerHTML;
-  bodyHTML = '<div id="dock-container"><div id="dock" align="center"><table id ="table"><tr><td><img onmouseover="mouse(this)" src="img/ai1.png"/></td><td><img onmouseover="mouse(this)" src="img/ba1.png"/></td></tr><tr><td><img onmouseover="mouse(this)" src="img/ce1.png"/></td><td><img onmouseover="mouse(this)" src="img/sc1.png"/></td></tr><tr><td><img onmouseover="mouse(this)" src="img/ai2.png"/></td><td><img onmouseover="mouse(this)" src="img/ba2.png"/></td></tr><tr><td><img onmouseover="mouse(this)" src="img/ce2.png"/></td><td><img onmouseover="mouse(this)" src="img/sc2.png"/></td></tr></table></div></div>' + bodyHTML;
-  document.body.innerHTML = bodyHTML;
+
+if (isMobile()) {
+  document.getElementById("table-container").style.visibility = "visible";
 }
