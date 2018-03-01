@@ -123,3 +123,26 @@ ul li {
   -webkit-transform: scale(1.5);
   margin: 0 0.5em;
 }
+
+#table {
+  list-style-type: none;
+  display: inline-block;
+}
+
+td {
+  text-align:center;
+}
+
+#dock tr img {
+  padding-left: 10px;
+  padding-right: 10px;
+  /*-webkit-box-reflect: below 2px
+        -webkit-gradient(linear, left top, left bottom, from(transparent),
+        color-stop(0.4, transparent), to(rgba(255,255,255,.2)));*/
+  -webkit-transition: all 0.3s;
+  -webkit-transform-origin: 50% 100%;
+}
+
+#dock table td:hover img { 
+  -webkit-transform: scale(1.2);
+}
