@@ -1,0 +1,125 @@
+@font-face {
+font-family: "Input";
+src: url("fonts/input.ttf");
+}
+
+@font-face {
+font-family: "Input Bold";
+src: url("fonts/input_bold.ttf");
+}
+
+@font-face {
+font-family: "Input Italic";
+src: url("fonts/input_italic.ttf");
+}
+
+@font-face {
+font-family: "Input Bold Italic";
+src: url("fonts/input_bold_italic.ttf");
+}
+
+body {
+  /*background: -webkit-gradient(linear, center bottom, center top, color-stop(0%,#fc0), color-stop(100%,#ff0));
+  background-attachment: fixed;*/
+  background: #fc0;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+a {
+  font-weight: bolder;
+  color: #221e20;
+  text-decoration: none;
+}
+
+a:hover {
+  font-weight: bold;
+  color: #221e20;
+  background-color: #fff;
+}
+
+#display-container {
+  position: relative;
+  border: 10px solid #221e20;
+  margin: auto;
+  margin-top: 80px;
+  padding: 15px;
+  width: 350px;
+  height: 350px;
+}
+
+#label-container {
+  position: absolute;
+  top: -30px;
+  left: -70px;
+}
+
+#label {
+  height: 130px;
+}
+
+#preview {
+  -webkit-transform: scale(1.3);
+  position: absolute;
+  bottom: 30px;
+  left: 50px;
+  width: 100px;
+  height: 100px;
+}
+
+#name {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  text-align: right;
+  font-family: "Input Bold Italic";
+  letter-spacing: -2px;
+  line-height: 24px;
+  color: #221e20;
+  font-size: 28px;
+}
+
+#desc {
+  position: absolute;
+  right: 20px;
+  top: 150px;
+  text-align: right;
+  font-family: "Input Italic";
+  font-size: 14px;
+  color: #221e20;
+}
+
+#copyright {
+  text-align: right;
+  font-family: "Input";
+  font-size: 10px;
+  color: #221e20;
+}
+
+#dock-container {
+  position: absolute;
+  bottom: 80px;
+  width: 100%;
+}
+
+ul li {
+  list-style-type: none;
+  display: inline-block;
+  margin: 0;
+  padding: 0px;
+}
+
+#dock li img {
+  padding-left: 10px;
+  padding-right: 10px;
+  -webkit-box-reflect: below 2px
+        -webkit-gradient(linear, left top, left bottom, from(transparent),
+        color-stop(0.4, transparent), to(rgba(255,255,255,.2))); /* reflection is supported by webkit only */
+  -webkit-transition: all 0.3s;
+  -webkit-transform-origin: 50% 100%;
+}
+
+#dock li:hover img { 
+  -webkit-transform: scale(1.5);
+  margin: 0 0.5em;
+}
