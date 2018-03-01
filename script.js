@@ -84,5 +84,6 @@ function isMobile() {
 
 
 if (isMobile()) {
+  alert("is mobile")
   document.getElementById("table-container").style.visibility = "visible";
 }
