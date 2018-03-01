@@ -84,7 +84,6 @@ function isMobile() {
 
 
 if (isMobile()) {
-  alert("is mobile");
   document.getElementById("dock-container").style.visibility = "hidden";
   document.getElementById("table-container").style.visibility = "visible";
 }
