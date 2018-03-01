@@ -63,3 +63,9 @@ function getDesc(id) {
     return "<p>- lost his white hat </p> <p>- considering getting <br>a black one</p> <p>- likes hash browns</p>";
   }
 }
+
+window.addEventListener("orientationchange", function() {                   
+    if(screen.innerWidth > screen.innerHeight){
+      document.getElementById("list").style.display = inline;
+      alert("FAT");
+}}, false);
