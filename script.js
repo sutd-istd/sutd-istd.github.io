@@ -64,20 +64,6 @@ function getDesc(id) {
   }
 }
 
-var list = document.getElementById("list");
-
-window.addEventListener("orientationchange", function() {                   
-    if(detectmob()){
-      list.style.display = none;
-      alert("FAT");
-}}, false);
-
-window.addEventListener("resize", function() {                   
-    if(detectmob()){
-      list.style.display = none;
-      alert("FAT");
-}}, false);
-
 function detectmob() { 
  if( navigator.userAgent.match(/Android/i)
  || navigator.userAgent.match(/webOS/i)
@@ -92,4 +78,10 @@ function detectmob() {
  else {
     return false;
   }
+}
+
+if(detectmob()) {
+  var bodyHTML = document.body.innerHTML;
+  bodyHTML = '<div id="dock-container"><div id="dock" align="center"><table id ="table"><tr><td><img onmouseover="mouse(this)" src="img/ai1.png"/></td><td><img onmouseover="mouse(this)" src="img/ba1.png"/></td></tr><tr><td><img onmouseover="mouse(this)" src="img/ce1.png"/></td><td><img onmouseover="mouse(this)" src="img/sc1.png"/></td></tr><tr><td><img onmouseover="mouse(this)" src="img/ai2.png"/></td><td><img onmouseover="mouse(this)" src="img/ba2.png"/></td></tr><tr><td><img onmouseover="mouse(this)" src="img/ce2.png"/></td><td><img onmouseover="mouse(this)" src="img/sc2.png"/></td></tr></table></div></div>' + bodyHTML;
+  document.body.innerHTML = bodyHTML;
 }
