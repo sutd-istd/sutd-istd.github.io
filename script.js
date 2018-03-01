@@ -64,8 +64,32 @@ function getDesc(id) {
   }
 }
 
+var list = document.getElementById("list");
+
 window.addEventListener("orientationchange", function() {                   
-    if(screen.innerWidth > screen.innerHeight){
-      document.getElementById("list").style.display = inline;
+    if(detectmob()){
+      list.style.display = none;
       alert("FAT");
 }}, false);
+
+window.addEventListener("resize", function() {                   
+    if(detectmob()){
+      list.style.display = none;
+      alert("FAT");
+}}, false);
+
+function detectmob() { 
+ if( navigator.userAgent.match(/Android/i)
+ || navigator.userAgent.match(/webOS/i)
+ || navigator.userAgent.match(/iPhone/i)
+ || navigator.userAgent.match(/iPad/i)
+ || navigator.userAgent.match(/iPod/i)
+ || navigator.userAgent.match(/BlackBerry/i)
+ || navigator.userAgent.match(/Windows Phone/i)
+ ){
+    return true;
+  }
+ else {
+    return false;
+  }
+}
