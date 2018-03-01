@@ -80,8 +80,12 @@ function detectmob() {
   }
 }
 
-if(detectmob()) {
-  var bodyHTML = document.body.innerHTML;
-  bodyHTML = '<div id="dock-container"><div id="dock" align="center"><table id ="table"><tr><td><img onmouseover="mouse(this)" src="img/ai1.png"/></td><td><img onmouseover="mouse(this)" src="img/ba1.png"/></td></tr><tr><td><img onmouseover="mouse(this)" src="img/ce1.png"/></td><td><img onmouseover="mouse(this)" src="img/sc1.png"/></td></tr><tr><td><img onmouseover="mouse(this)" src="img/ai2.png"/></td><td><img onmouseover="mouse(this)" src="img/ba2.png"/></td></tr><tr><td><img onmouseover="mouse(this)" src="img/ce2.png"/></td><td><img onmouseover="mouse(this)" src="img/sc2.png"/></td></tr></table></div></div>' + bodyHTML;
-  document.body.innerHTML = bodyHTML;
+if(!detectmob()) {
+  alert("notmob");
+  
+  // var bodyHTML = document.body.innerHTML;
+  // bodyHTML = '<div id="dock-container"><div id="dock" align="center"><table id ="table"><tr><td><img onmouseover="mouse(this)" src="img/ai1.png"/></td><td><img onmouseover="mouse(this)" src="img/ba1.png"/></td></tr><tr><td><img onmouseover="mouse(this)" src="img/ce1.png"/></td><td><img onmouseover="mouse(this)" src="img/sc1.png"/></td></tr><tr><td><img onmouseover="mouse(this)" src="img/ai2.png"/></td><td><img onmouseover="mouse(this)" src="img/ba2.png"/></td></tr><tr><td><img onmouseover="mouse(this)" src="img/ce2.png"/></td><td><img onmouseover="mouse(this)" src="img/sc2.png"/></td></tr></table></div></div>' + bodyHTML;
+  // document.body.innerHTML = bodyHTML;
+} else {
+  alert("mob");
 }
